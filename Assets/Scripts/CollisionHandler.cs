@@ -18,19 +18,21 @@ public class CollisionHandler : MonoBehaviour
     bool isTransitioning = false;
     bool collisionDisabled = false;
 
-    public int health = 4;
-
-    // private int _score;
-    // private int lifeCount = 5;
+    //public int health = 4;
 
     void Start()
     {
+        //Debug.Log(PlayerInfo.health);
+
+        
+
         audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         RespondToDebugKeys();
+        GetComponent<HeartSystem>().ChangeSprite(PlayerInfo.health);
     }
 
 
@@ -47,14 +49,6 @@ public class CollisionHandler : MonoBehaviour
         }
     }
 
-    // void UpdateLifeCount(int count)
-    // {
-    //     if (count < -1)
-    //     {
-    //         return;
-    //     }
-    //     count -= 1;
-    // }
 
     void OnCollisionEnter(Collision other)
     {
@@ -87,8 +81,9 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
-        //health -= 1;
-       //GetComponent<HeartSystem>().ChangeSprite(health);
+        PlayerInfo.health -= 1;
+        Debug.Log(PlayerInfo.health);
+        GetComponent<HeartSystem>().ChangeSprite(PlayerInfo.health);
         isTransitioning = true;
         audioSource.Stop();
         audioSource.PlayOneShot(crash);

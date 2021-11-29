@@ -1945,6 +1945,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 812570740, guid: da60e52845d2e164997888d460569f2e, type: 3}
+      propertyPath: life.Array.data[0]
+      value: 
+      objectReference: {fileID: 921604605}
+    - target: {fileID: 812570740, guid: da60e52845d2e164997888d460569f2e, type: 3}
+      propertyPath: life.Array.data[1]
+      value: 
+      objectReference: {fileID: 1452195614}
+    - target: {fileID: 812570740, guid: da60e52845d2e164997888d460569f2e, type: 3}
+      propertyPath: life.Array.data[2]
+      value: 
+      objectReference: {fileID: 1172539108}
+    - target: {fileID: 812570740, guid: da60e52845d2e164997888d460569f2e, type: 3}
+      propertyPath: life.Array.data[3]
+      value: 
+      objectReference: {fileID: 2140487480}
     - target: {fileID: 4722734211807749956, guid: da60e52845d2e164997888d460569f2e, type: 3}
       propertyPath: m_Name
       value: rocket

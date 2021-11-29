@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class HeartSystem : MonoBehaviour
 {
-    public int lifeCount;
-    public int numOfHearts;
+    //public int lifeCount;
+    //public int numOfHearts;
 
     public Image[] life;
     public Sprite fullLife;
@@ -29,11 +29,11 @@ public class HeartSystem : MonoBehaviour
        
     //}
 
-    public void ChangeSprite(int lifeCount)
+    public void ChangeSprite(int x)
     {
         for (int i = 0; i < life.Length; i++)
         {
-            if (i < lifeCount)
+            if (i < x)
             {
                 life[i].sprite = fullLife;
             }
@@ -43,14 +43,14 @@ public class HeartSystem : MonoBehaviour
             }
 
 
-            //if (i < numOfHearts)
+          /*  //if (i < numOfHearts)
             //{
             //    life[i].enabled = true;
             //}
             //else
             //{
             //    life[i].enabled = false;
-            //}
+            //}*/
         }
     }
 }

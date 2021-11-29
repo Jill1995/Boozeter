@@ -625,32 +625,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777030983}
   m_CullTransparentMesh: 1
---- !u!1 &812570731 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4722734211807749956, guid: da60e52845d2e164997888d460569f2e, type: 3}
-  m_PrefabInstance: {fileID: 7972091923574292629}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &812570740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812570731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaa428229743eec4d80127e7f73427e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeCount: 0
-  numOfHearts: 4
-  life:
-  - {fileID: 1246546710}
-  - {fileID: 1165568910}
-  - {fileID: 500665434}
-  - {fileID: 1472559952}
-  fullLife: {fileID: 21300000, guid: de23959b3b72a0f4c9d26c48fe640f17, type: 3}
-  emptyLife: {fileID: 21300000, guid: 64900165a3a26224d86a0e5d93ab5d00, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +737,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e60d948d4b204a448983ce692c4c485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numLives: 3
+  score: 0
 --- !u!4 &1075354199
 Transform:
   m_ObjectHideFlags: 0
@@ -1920,6 +1896,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 812570740, guid: da60e52845d2e164997888d460569f2e, type: 3}
+      propertyPath: life.Array.data[0]
+      value: 
+      objectReference: {fileID: 1246546710}
+    - target: {fileID: 812570740, guid: da60e52845d2e164997888d460569f2e, type: 3}
+      propertyPath: life.Array.data[1]
+      value: 
+      objectReference: {fileID: 1165568910}
+    - target: {fileID: 812570740, guid: da60e52845d2e164997888d460569f2e, type: 3}
+      propertyPath: life.Array.data[2]
+      value: 
+      objectReference: {fileID: 500665434}
+    - target: {fileID: 812570740, guid: da60e52845d2e164997888d460569f2e, type: 3}
+      propertyPath: life.Array.data[3]
+      value: 
+      objectReference: {fileID: 1472559952}
     - target: {fileID: 4722734211807749956, guid: da60e52845d2e164997888d460569f2e, type: 3}
       propertyPath: m_Name
       value: rocket
