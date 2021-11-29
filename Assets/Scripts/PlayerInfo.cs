@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayerInfo : MonoBehaviour
 {
-    public static int health = 4;
+    private void Start(){ }
+            public static int health = 4;
 
-    private void OnDestroy()
-    {
-        Debug.Log("Object Destroyed");
-    }
 }
+   
+
+
+    
+
+    
 
