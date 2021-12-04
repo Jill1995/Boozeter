@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\PlayerInfo.cs" />
     <Compile Include="Assets\Scripts\Updown.cs" />
     <Compile Include="Assets\Scripts\DontDestroy.cs" />
+    <Compile Include="Assets\Scripts\PermVariables.cs" />
+    <Compile Include="Assets\Scripts\ScorePanelUpdater.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -13,44 +13,26 @@ public class HeartSystem : MonoBehaviour
     public Sprite fullLife;
     public Sprite emptyLife;
 
-    //void Start()
-    //{
-    //    lifeCount = GetComponent<CollisionHandler>().health;
-    //}
-
-    //void Update()
-    //{
-    //    if(lifeCount > numOfHearts)
-    //    {
-    //        lifeCount = numOfHearts;
-    //    }
-
-    //    ChangeSprite();
-       
-    //}
-
-    public void ChangeSprite(int x)
+    void Update()
     {
+  
+
+    }
+
+    public void ChangeSprite(int health)
+    {
+        
         for (int i = 0; i < life.Length; i++)
         {
-            if (i < x)
+            if (i < health)
             {
                 life[i].sprite = fullLife;
+                //Debug.Log(i);
             }
             else
             {
                 life[i].sprite = emptyLife;
             }
-
-
-          /*  //if (i < numOfHearts)
-            //{
-            //    life[i].enabled = true;
-            //}
-            //else
-            //{
-            //    life[i].enabled = false;
-            //}*/
         }
     }
 }

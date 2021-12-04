@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerInfo : MonoBehaviour
 {
     private void Start(){ }
-            public static int health = 4;
+            //public static int health = 4;
+
+
 
 }
    

@@ -25,6 +25,8 @@ public class GUILabel : MonoBehaviour
             Time.timeScale = 1;
             Destroy(instructions);
         }
+
+
     }
 
 }

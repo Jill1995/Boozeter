@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -18,21 +19,25 @@ public class CollisionHandler : MonoBehaviour
     bool isTransitioning = false;
     bool collisionDisabled = false;
 
-    //public int health = 4;
+    public PermVariables lifeCount;
 
     void Start()
     {
         //Debug.Log(PlayerInfo.health);
-
-        
-
+        if(lifeCount.value <= 0)
+        {
+            lifeCount.value = 4;
+        }
+       GetComponent<HeartSystem>().ChangeSprite(lifeCount.value);
         audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         RespondToDebugKeys();
-        GetComponent<HeartSystem>().ChangeSprite(PlayerInfo.health);
+        
+        //GetComponent<HeartSystem>().ChangeSprite(lifeCount.value);
+
     }
 
 
@@ -81,9 +86,10 @@ public class CollisionHandler : MonoBehaviour
 
     void StartCrashSequence()
     {
-        PlayerInfo.health -= 1;
-        Debug.Log(PlayerInfo.health);
-        GetComponent<HeartSystem>().ChangeSprite(PlayerInfo.health);
+        
+        lifeCount.value -= 1;
+        Debug.Log(lifeCount.value);
+        GetComponent<HeartSystem>().ChangeSprite(lifeCount.value);
         isTransitioning = true;
         audioSource.Stop();
         audioSource.PlayOneShot(crash);
